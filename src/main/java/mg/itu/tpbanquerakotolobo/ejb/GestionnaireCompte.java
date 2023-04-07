@@ -22,8 +22,8 @@ import mg.itu.tpbanquerakotolobo.entities.CompteBancaire;
         name = "java:app/jdbc/banque",
         serverName = "localhost",
         portNumber = 3306,
-        user = "root", // nom et
-        password = "root", // mot de passe que vous avez donnés lors de la création de la base de données
+        user = "root",
+        password = "root",
         databaseName = "banque",
         properties = {
             "useSSL=false",
