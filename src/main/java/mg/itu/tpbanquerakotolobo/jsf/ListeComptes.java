@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 import mg.itu.tpbanquerakotolobo.ejb.GestionnaireCompte;
 import mg.itu.tpbanquerakotolobo.entities.CompteBancaire;
+import mg.itu.tpbanquerakotolobo.jsf.util.Util;
 
 /**
  *
@@ -36,6 +37,12 @@ public class ListeComptes implements Serializable {
             compteList = compteManager.getAllComptes();
         }
         return compteList;
+    }
+
+    public String supprimerCompte(CompteBancaire compteBancaire) {
+        compteManager.supprimerCompte(compteBancaire);
+        Util.addFlashInfoMessage("Compte de " + compteBancaire.getNom() + " supprimé");
+        return "listeComptes?faces-redirect=true";
     }
 
 }
