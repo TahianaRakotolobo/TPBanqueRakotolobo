@@ -23,7 +23,7 @@
                         </f:facet>
                         <h:outputText value="#{item.id}"/>
                     </p:column>
-                    <p:column>
+                    <p:column sortBy="#{item.nom}" filterBy="#{item.nom}">
                         <f:facet name="header">
                             <h:outputText value="Nom"/>
                         </f:facet>
